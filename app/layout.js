@@ -3,7 +3,7 @@ import Navbar from "@/src/components/Navbar";
 
 // Metadata for the page, used by search engines and browsers
 export const metadata = {
-  title: "Travel UI", // Sets the title of the page
+  title: "trvvrat", // Sets the title of the page
   description: "Explore the world with us", // Sets the meta description for the page
 };
 
