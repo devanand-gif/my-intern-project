@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root variables for consistent color usage across the application */
+:root {
+  --primary-color: #287bf8;
+  --shade-color: #f6f6f6;
+  --black-color: #070707;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Global reset applying margin, padding, and box-sizing to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles for the body and html elements */
+body,
+html {
+  height: 100%; /* Ensures body and html take up the full viewport height */
+  font-family: "DM Sans", sans-serif; /* Sets a default font family */
+  background-color: var(--shade-color); /* Applies a background color using a CSS variable */
+}
+
+/* Custom utility class to create a diagonal clip-path effect */
+.clip-diagonal {
+  clip-path: polygon(
+    70px 0%,    /* Top-left corner is cut starting 70px from left edge */
+    100% 0%,    /* Top-right corner */
+    100% 100%,  /* Bottom-right corner */
+    0% 100%,    /* Bottom-left corner */
+    0% 70px     /* Clip ends 70px from top edge on the left side */
+  );
+  border-radius: 1rem; /* Optional: Adds rounded corners */
+}
